@@ -1,0 +1,29 @@
+<h2>Por País</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+<app-pais-input  
+(onEnter)="buscar($event)" 
+(onDebounce)="sugerencias($event)" >
+
+</app-pais-input>
+
+
+    </div>
+
+</div>
+<hr>
+<div 
+*ngIf="hayError"
+class="alert-danger">
+    No se encontró nada con el termino {{termino}}
+</div>
+<div 
+*ngIf="paises.length > 0"
+class="row">
+    <div class="col">
+    <!-- asi le pasamos el listado de paises al componente de pais tabla con [paises]="paises" -->
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+    </div>
+</div>
