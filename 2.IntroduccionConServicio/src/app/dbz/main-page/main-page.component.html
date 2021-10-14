@@ -1,0 +1,41 @@
+<p>Dragon Ball Z</p>
+<hr>
+
+<div class="row">
+
+    <div class="col">
+        <!-- Para obtener los personajes desde el componente hijo
+        desde el main component, personajes  en amarillo los que se 
+        encuentran en el main page y en las llaves la propiedad 
+        de data_personajes en el componente hijo con el input -->
+        <app-personajes >
+           
+        </app-personajes>
+        <!-- <h3>Personajes</h3>
+        <hr>
+        <li *ngFor="let personaje of personajes; let i = index"> 
+            {{i + 1 }} - {{personaje.nombre}} - {{personaje.poder | number}} -->
+            <!-- El number es parar formatear a decimal y que salga como numero -->
+         <!-- </li> -->
+    </div>
+
+    <div class="col">
+        <app-agregar
+         [nuevo]="nuevo"
+        
+         ></app-agregar>
+        <!-- <h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr>
+      
+        <form (ngSubmit)="agregar()"> -->
+            <!-- <input type="text" placeholder="Nombre" [value]="nuevo.nombre" (input)="cambiarNombre($event)"> -->
+            <!-- <input type="text" placeholder="Nombre"  name="nombre" [(ngModel)]="nuevo.nombre">
+            <input type="number" placeholder="Poder"  name="poder" [(ngModel)]="nuevo.poder">
+
+            <button type="submit">
+                Agregar
+            </button>
+        </form> -->
+    </div>
+
+</div>

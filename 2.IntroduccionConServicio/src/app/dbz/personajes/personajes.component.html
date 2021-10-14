@@ -1,0 +1,6 @@
+<h3>Personajes</h3>
+<hr>
+<li *ngFor="let personaje of personajes; let i = index"> 
+    {{i + 1 }} - {{personaje.nombre}} - {{personaje.poder | number}}
+    <!-- El number es parar formatear a decimal y que salga como numero -->
+ </li>
